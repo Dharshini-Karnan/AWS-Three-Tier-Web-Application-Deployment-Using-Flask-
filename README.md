@@ -4,27 +4,35 @@ Architecture Overview
 
 The project implements a standard 3-tier architecture:
 
-Client (Browser)
-      │
-      ▼
-Frontend (HTML/CSS/JS) – Public Subnet
-      │
-      ▼
-Backend (Flask API) – Private Subnet
-      │
-      ▼
-Database (RDS MySQL) – Private Subnet (Optional)
+**Architecture Overview**
 
+The application follows a standard 3-tier structure:
 
-Description of Tiers:
+1️⃣ Presentation Tier (Frontend – Public Subnet)
 
-Frontend (Public Subnet): Serves static HTML, CSS, JS files using Apache/Nginx on EC2.
+Static website using HTML, CSS, JavaScript
 
-Backend (Private Subnet): Python Flask API handles requests from frontend; no public access.
+Hosted on an EC2 instance in a public subnet
 
-Database (Optional Private Subnet): MySQL RDS instance storing application data securely.
+Accessible over HTTP (port 80)
 
-Features
+2️⃣ Application Tier (Backend – Private Subnet)
+
+Python Flask backend API
+
+Runs on an EC2 instance in a private subnet
+
+Accessible only from frontend EC2 (Security Group rule)
+
+3️⃣ Data Tier (Optional – Private Subnet)
+
+Amazon RDS MySQL 
+
+Accessible only by backend EC2
+
+No public internet exposure
+
+**Features**
 
 Custom VPC with public and private subnets
 
@@ -34,11 +42,11 @@ Secure communication between frontend and backend
 
 Optional database integration using Amazon RDS
 
-AWS Free Tier deployment
+**AWS Free Tier deployment**
 
-Documentation with architecture diagram and screenshots
+Documentation with architecture diagram and screenshot.
 
-Technologies Used
+**Technologies Used****
 
 AWS Services: EC2, VPC, Subnets, Security Groups, IAM, RDS (optional), CloudWatch
 
