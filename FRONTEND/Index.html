@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWS Cloud Project</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Cloud<span>Project</span></h2>
+            <button class="contact-btn" onclick="showMessage()">Contact</button>
+        </nav>
+
+        <div class="hero">
+            <h1 class="title">Deploying the Future with AWS</h1>
+            <p class="subtitle">
+                A fully scalable 3-tier cloud application built using AWS services like EC2, RDS, S3 & CloudFront.
+            </p>
+            <button class="cta" onclick="scrollToSection()">Explore Project</button>
+        </div>
+    </header>
+
+    <section id="project" class="section">
+        <h2>Project Overview</h2>
+        <p>
+            This AWS project demonstrates a complete 3-tier architecture including a frontend hosted on S3,
+            backend on EC2 behind a Load Balancer, and a database in RDS.
+        </p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>S3 + CloudFront</h3>
+                <p>Static website hosting with global content delivery.</p>
+            </div>
+            <div class="card">
+                <h3>EC2 Backend API</h3>
+                <p>Secure, scalable server running in private subnets.</p>
+            </div>
+            <div class="card">
+                <h3>RDS MySQL</h3>
+                <p>Managed database for reliable data storage.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 AWS Cloud Project. Built by Dharshini.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
